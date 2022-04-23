@@ -67,12 +67,16 @@ WSGI_APPLICATION = 'flash.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'default': { 
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
+# DATABASES['default'] = dj_database_url.config(default='postgres://yogtoszdpfgmnu:20f87f9af60a4065f035f6c84df9185dabd736576e172783b5e32d7576757edb@ec2-52-73-155-171.compute-1.amazonaws.com:5432/d8gs911r59sud9')
+
+# db_from_env = dj_database_url.config(conn_max_age=600)
+# DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

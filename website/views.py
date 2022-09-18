@@ -18,7 +18,7 @@ def add(request):
 		if not answer:
 			my_answer = "hey! You forgot to fill out the form!"
 			color = 'warning'
-			return render(request, 'divide.html', {
+			return render(request, 'add.html', {
 			'color':color,
 			'my_answer':my_answer,
 			'num_1':num_1,
